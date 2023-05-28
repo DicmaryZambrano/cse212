@@ -34,6 +34,7 @@ class Translator:
 
         my_translator.add_word("book","buch")
         """
+        #translates the word using the key
         self.words[from_word] = to_word
 
     def translate(self, from_word):
@@ -45,9 +46,11 @@ class Translator:
         german_word = my_translator.translate("book")
         """
         if from_word in self.words:
+            #if the word is inside the dict then it returns the translation
             return self.words[from_word]
 
         else:
+            #if its not found returns an error
             return "???"
 
 # Sample Test Cases (may not be comprehensive) 
@@ -79,12 +82,15 @@ def summarize_degrees(filename):
         for line in file_in:
             fields = line.split(",") 
 
+            #get degree information
             degree = fields[3]
 
             if degree not in degrees:
+                #if degree not in dict add
                 degrees[degree] = 1
 
             else:
+                #else sum degree key
                 degrees[degree] += 1
 
 
@@ -137,12 +143,15 @@ def is_anagram(word1, word2):
     letters1= {}
     letters2= {}    
 
+    #sumarize dictionaries CAAT will be {C:1,A:2,T:1}
     summarize_word(word1, letters1)
     summarize_word(word2, letters2)
 
+    # if dictionaries are equal then it is an anagram
     if letters1 == letters2:
         return True
     else:
+        #if not then it is not an anagram
         return False
 
 # Sample Test Cases (may not be comprehensive) 
@@ -194,7 +203,10 @@ class Maze:
         Check to see if you can move left.  If you can, then move.  If you
         can't move, then display "Can't go that way!"
         """
+        #get the list of valid directions
         directions = self.maze_map[self.curr_x,self.curr_y]
+
+        #if movement to the left is valid x will be subtracted by 1
         if directions[0]:
             self.curr_x-=1
         else:
@@ -205,7 +217,11 @@ class Maze:
         Check to see if you can move right.  If you can, then move.  If you
         can't move, then display "Can't go that way!"
         """      
+
+        #get the list of valid directions
         directions = self.maze_map[self.curr_x,self.curr_y]
+
+        #if movement to the right is valid x will be sum by 1
         if directions[1]:
             self.curr_x+=1
         else:
@@ -216,7 +232,10 @@ class Maze:
         Check to see if you can move up.  If you can, then move.  If you
         can't move, then display "Can't go that way!"
         """
+        #get the list of valid directions
         directions = self.maze_map[self.curr_x,self.curr_y]
+
+        #if movement up is valid y will be subtracted by 1
         if directions[2]:
              self.curr_y-=1
         else:
@@ -227,8 +246,10 @@ class Maze:
         Check to see if you can move down.  If you can, then move.  If you
         can't move, then display "Can't go that way!"
         """
-        
+        #get the list of valid directions
         directions = self.maze_map[self.curr_x,self.curr_y]
+
+        #if movement up is valid y will be sum by 1
         if directions[3]:
             self.curr_y+=1
         else:
@@ -327,9 +348,12 @@ def earthquake_daily_summary():
     req = requests.get("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson")
     data = req.json() # The .json() function will convert the json data from the server to a dictionary
 
+    #get the dictionary of features
     for features in data["features"]:
 
+        #get the place key from the properties dictionary 
         place = features["properties"]["place"]
+        #get the mag key from the properties dictionary 
         mag = features["properties"]["mag"]
 
         print("- Place: {} - Mag:  {}".format(place,mag))
