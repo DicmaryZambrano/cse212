@@ -44,7 +44,7 @@ Let’s see how we can implement these operations in code, similar to stack queu
 | Operation | Python Code                                            | Performance | Description                                                     |
 | --------- | ------------------------------------------------------ | ----------- | --------------------------------------------------------------- |
 | Enqueue   | `queue.append(value)`                                  | O(1)        | Adds an item to the back of the queue.                          |
-| Dequeue   | `front = queue[0] return queue.pop`(0)                 | O(n)        | Removes an item from the front of the queue and returns it      |
+| Dequeue   | `front = queue[0] return queue.pop(0)`                 | O(n)        | Removes an item from the front of the queue and returns it      |
 | In empty  | `if queue.size() == 0: return true else: return false` | O(1)        | Returns true if the queue is empty, false otherwise             |
 | Size      | `size = len(queue) return size`                        | O(1)        | returns the item at the front of the queue without removing it. |
 
