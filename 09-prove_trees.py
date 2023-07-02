@@ -67,17 +67,18 @@ class BST:
                 node.left = BST.Node(data)
             else:
                 # Need to keep looking.  Call _insert
-                # recursively on the left sub-tree.
+                # recursively on the left subtree.
                 self._insert(data, node.left)
-        else:
+        elif data > node.data:
             # The data belongs on the right side.
             if node.right is None:
                 # We found an empty spot
                 node.right = BST.Node(data)
             else:
                 # Need to keep looking.  Call _insert
-                # recursively on the right sub-tree.
+                # recursively on the right subtree.
                 self._insert(data, node.right)
+        
     
     #################
     # End Problem 1 #
@@ -104,7 +105,31 @@ class BST:
         represented by 'node'.  This function is intended
         to be called the first time by the __contains__ function.
         """
-        pass
+
+        if data == node.data:
+            return True
+
+        elif data < node.data:
+            # The data belongs on the left side.
+            if node.left is None:
+                #we found a dead end, data in not on BST
+                return False
+            else:
+                # Need to keep looking.  Call _contrains
+                # recursively on the left subtree.
+                return self._contains(data, node.left)
+        elif data >= node.data:
+            # The data belongs on the right side.
+            if node.right is None:
+                return False
+            else:
+                # Need to keep looking.  Call _insert
+                # recursively on the right subtree.
+                return self._contains(data, node.right)
+
+        else:
+            return False
+
 
     #################
     # End Problem 2 #
@@ -181,7 +206,10 @@ class BST:
         This function is intended to be called the first time by 
         the __reversed__ function.        
         """
-        yield "???"  # Replace this when you implement your solution
+        if node is not None:
+            yield from self._traverse_backward(node.right)
+            yield node.data
+            yield from self._traverse_backward(node.left)
 
     #################
     # End Problem 3 #
@@ -214,7 +242,16 @@ class BST:
         This function intended to be called the first time by 
         get_height.
         """
-        pass
+        #cheack if is none return 0 
+        #check right and left
+        if node is None:
+            return 0 
+
+        left = self._get_height(node.left)
+        right = self._get_height(node.right)
+    
+
+        return max(left, right) + 1       
 
     #################
     # End Problem 4 #
@@ -269,7 +306,20 @@ def _insert_middle(sorted_list, first, last, bst):
     using list slicing to create sublists to solve this problem.
 
     """
-    pass
+
+    #gets the index of the middle of the list
+    middle_index = int((first+last)/2)
+    
+    #checks if the index is in range
+    if middle_index <= last and middle_index >= first:
+        #inserts the element on the binary tree
+        bst.insert(sorted_list[middle_index])
+
+        #starts recursively adding values to the binary tree in a balance manner
+        #until the middle index is out of range
+        _insert_middle(sorted_list, first, middle_index-1, bst)
+        _insert_middle(sorted_list, middle_index+1, last, bst)
+
 
 #################
 # End Problem 5 #
@@ -322,6 +372,5 @@ print(tree2.get_height()) # 7 .. any higher and its not balanced
 print(tree3.get_height()) # 8 .. any higher and its not balanced
 print(tree4.get_height()) # 1
 print(tree5.get_height()) # 0
-
 
 
