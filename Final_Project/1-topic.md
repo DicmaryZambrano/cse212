@@ -169,7 +169,7 @@ queue.enqueue('caller #3231')
 assert queue.size() == 3
 
 # Test dequeue method
-assert queue.dequeue() == '#1234'
+assert queue.dequeue() == 'caller #1234'
 assert queue.size() == 2
 
 # Test is_empty method
