@@ -4,7 +4,7 @@ The Queue abstract data type is another fundamental data structure. It is quite 
 
 A good example for a queue is a how calls are handled on a call center, when a customer calls the call center, their call is added to a queue, and the next available agent takes the first call in the queue. This ensures that customers are served in the order in which they called, with the oldest call being served first.
 
-![Example of a call center recieving calls in a FIFO dicipline](images/queue_example.jpg)
+![Example of a call center recieving calls in a FIFO dicipline](https://i.imgur.com/vcVJt8p.jpg)
 
 The element which will be removed first from the queue is typically called the head and the element which will be removed last from the queue is called the tails or rear.
 
@@ -54,7 +54,7 @@ By using a list for our queue some operations will have a different time complex
 
 Now it is time to get our hands dirty and start typing some code, for this first example we will create a queue for a call center. The call center needs a queue because they are not able to attend the customers in a FIFO order and they feel frustrated for the inconsistent waiting times, so they hope you can help them solve this problem.
 
-![Example of a call center recieving calls in a FIFO dicipline](images/queue_problem.jpg)
+![Worried call center employee](https://i.imgur.com/RmxOuSu.jpg)
 
 These are the requirenments:
 
@@ -187,6 +187,8 @@ else:
 ```
 
 After giving this code to the call center they noticed several problems on their service, their queues got way too long but at least they were now able to identify which call to respond first. Thanks to you they will be able to provide a better service
+
+![Happy call center employee](https://i.imgur.com/VHwuaXx.jpg)
 
 ## Example Problem
 
