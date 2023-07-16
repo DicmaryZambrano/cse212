@@ -474,10 +474,13 @@ Finally we need a method to display all the contacts in our contact book in alph
 Let's see how the full code would look like
 
 ```python
+
 """
-    Let's say you start looking at your contacts on your note book and start searching for the new number of your best friend, but
-    you have so many contacts in your note book that it takes you way too much time to go trough the contacts one by one,
-    your task it to create a fast and efficient way to organize your contacts in python to make it easier for you to find everything.
+    Let's say you start looking at your contacts on your note book and start searching
+    for the new number of your best friend, but you have so many contacts in your note
+    book that it takes you way too much time to go trough the contacts one by one, your
+    task it to create a fast and efficient way to organize your contacts in python to
+    make it easier for you to find everything.
 """
 class ContactBook:
     class Contact:
@@ -547,7 +550,8 @@ class ContactBook:
     def search(self, name):
         """
         Searches the binary search tree for a Contact object with the specified name.
-        Returns True if a Contact object with that name exists in the binary search tree, or False otherwise.
+        Returns True if a Contact object with that name exists in the binary search tree,
+        or False otherwise.
         """
         return self._recursive_search(self.root, name)
 
