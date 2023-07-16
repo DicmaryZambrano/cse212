@@ -422,23 +422,7 @@ You have been tasked with implementing a shopping cart application using a linke
 hints: you can add more than a single attribute to your nodes, and don't forget to update the total prices
 and the total number of items. Use the previous linked list as a template to complete the missing code
 
-Your implementation should include the following:
-
-- add(target_item,item, price): Adds a new afther the target item.
-
-- add_to_tail(item, price): Adds an item to the tail of the list.
-
-- add_to_head(item, price): Adds an item to the head of the list.
-
-- remove(item): Removes the first occurrence of the given item from the linked list, if it exists.
-
-- remove_head(item): Removes from the head.
-
-- remove_tail(item): Removes from the tail.
-
-- view(): Prints out all the items in the linked list, along with their prices and the total cost of the shopping cart.
-
-Your implementation should also adhere to the following rules:
+Requirements:
 
 - Each node in the linked list should contain a single item (i.e., a string) and its price.
 
