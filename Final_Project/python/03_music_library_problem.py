@@ -16,17 +16,12 @@ class MusicLibrary:
     class Album:
         def __init__(self, title, author, num_songs):
             #crete a title, author, num songs, left and right attribute
-            self.title = title
-            self.author = author
-            self.num_songs = num_songs
             self.left = None
             self.right = None
 
     def __init__(self):
         #crete a root, num_albums and total songs attribute
         self.root = None
-        self.num_albums = 0
-        self.total_songs = 0
 
     def insert(self, title, author, num_songs):
         #insert a new album into the binary search tree
@@ -37,28 +32,25 @@ class MusicLibrary:
             self._insert_helper(self.root, new_album)
 
         #remember to update the number of albums and the total number of songs
-        self.num_albums += 1
-        self.total_songs += num_songs
 
     def _insert_helper(self, current, new_album):
         #if the album title is the same replace the author and number of songs
         if new_album.title == current.title:
-            current.author = new_album.author
-            current.num_songs = new_album.num_songs
+            pass
         #if the new title is lower than the current title and the left pointer is empty insert the song
         # keep going to the left if otherwise 
         elif new_album.title < current.title:
             if current.left is None:
-                current.left = new_album
+                pass
             else:
-                self._insert_helper(current.left, new_album)
+                pass
         #if the new title is higher than the current title and the right pointer is empty insert the song
         # keep going to the right if otherwise 
         else:
             if current.right is None:
-                current.right = new_album
+                pass
             else:
-                self._insert_helper(current.right, new_album)
+                pass
 
     def delete(self, title):
         #deletes any node that has 0 children or only 1 children, remember to replace the
@@ -71,19 +63,16 @@ class MusicLibrary:
         elif title == current.title:
             if current.left is None and current.right is None:
                 # If the current node has no children, delete it by returning None.
-                self.num_albums -= 1
-                self.total_songs -= current.num_songs
-                return None
+                # and update the number of albums and songs
+                pass
             elif current.left is None:
                 # If the current node has only a right child, replace it with its right child.
-                self.num_albums -= 1
-                self.total_songs -= current.num_songs
-                return current.right
+                # and update the number of albums and songs
+                pass
             elif current.right is None:
                 # If the current node has only a left child, replace it with its left child.
-                self.num_albums -= 1
-                self.total_songs -= current.num_songs
-                return current.left
+                # and update the number of albums and songs
+                pass
             else:
                 # If the current node has two children we can't delete this node
                 print("This node can't be deleted because it has two children")
@@ -111,9 +100,7 @@ class MusicLibrary:
         # branches first and the right branches after
 
         if current is not None:
-            self._display_helper(current.left)
-            print(f"Title: {current.title}, Author: {current.author}, Number of Songs: {current.num_songs}")
-            self._display_helper(current.right)
+            pass
 
     def height(self):
         # Return the height of the binary search tree, remember that re formula is
@@ -127,9 +114,11 @@ class MusicLibrary:
         if current is None:
             return 0
         else:
-            left_height = self._height_helper(current.left) #fill code here to store the heigh of the left brach
-            right_height = self._height_helper(current.right) # fill code here to store the heigh of the right branch
-            return max(left_height, right_height) + 1 #use the formula to calculate the height
+            #fill code here to store the heigh of the left brach
+
+            # fill code here to store the heigh of the right branch
+
+            return #use the formula to calculate the height
 
 # Create a new music library and insert some albums
 my_library = MusicLibrary()

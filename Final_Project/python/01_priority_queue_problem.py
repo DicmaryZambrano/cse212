@@ -39,13 +39,12 @@ queue = Priority_Queue()
 queue.enqueue("VIP customer", 3)
 queue.enqueue("Regular customer", 2)
 queue.enqueue("Walk-in customer", 1)
-
+print("\n======================")
 # Remove reservations from the queue in order of their priority
 print(queue.dequeue()) # "VIP customer"
 print(queue.dequeue()) # "Regular customer"
 print(queue.dequeue()) # "Walk-in customer"
-
+print("\n======================")
 # Get the size of the queue
-print(queue.size()) # 0
-
-# Create more test cases if you would like
+print(f"size: {queue.size()}") # 0
+print("\n======================")

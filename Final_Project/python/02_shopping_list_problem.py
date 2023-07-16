@@ -177,7 +177,7 @@ cart.add_to_head("Orange", 0.79)
 
 # Test viewing the shopping cart
 cart.view()
-
+print("\n======================")
 # Expected output:
 # Shopping cart:
 # Orange: $0.79
@@ -190,7 +190,7 @@ cart.remove("Apple")
 
 # Test viewing the shopping cart again
 cart.view()
-
+print("\n======================")
 # Expected output:
 # Shopping cart:
 # Orange: $0.79
@@ -202,7 +202,7 @@ cart.remove("Grape")
 
 # Test viewing the shopping cart again
 cart.view()
-
+print("\n======================")
 # Expected output:
 # Shopping cart:
 # Orange: $0.79
@@ -215,7 +215,7 @@ cart.add("Orange","Pineapple", 2.99)
 
 # Test viewing the shopping cart again
 cart.view()
-
+print("\n======================")
 # Expected output:
 # Shopping cart:
 # Orange: $0.79
@@ -230,7 +230,7 @@ cart.remove_tail()
 
 # Test viewing the shopping cart again
 cart.view()
-
+print("\n======================")
 # Expected output:
 # Shopping cart:
 # Pineapple: $2.99
