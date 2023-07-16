@@ -202,15 +202,15 @@ Hint: You can use tuples inside of the dynamic list like this [ customer, priori
 
 Requirements:
 
-• The Priority_Queue class should be based on the Simple_Queue class showed previously.
+- The Priority_Queue class should be based on the Simple_Queue class showed previously.
 
-• The Priority_Queue class should support adding elements to the queue with an associated priority.
+- The Priority_Queue class should support adding elements to the queue with an associated priority.
 
-• The Priority_Queue class should remove elements from the queue in order of their priority, with higher priority elements being removed first.
+- The Priority_Queue class should remove elements from the queue in order of their priority, with higher priority elements being removed first.
 
-• The Priority_Queue class should raise an IndexError if an attempt is made to remove an element from an empty queue.
+- The Priority_Queue class should raise an IndexError if an attempt is made to remove an element from an empty queue.
 
-copy the code below to start working on your solution, compare your solution to [this example solution](python/01-priority_queue_solution.py).
+Copy the code below to start working on your solution, compare your solution to [this example solution](python/01_priority_queue_solution.py).
 
 ```python
 '''

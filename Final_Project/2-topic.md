@@ -450,7 +450,7 @@ Your implementation should also adhere to the following rules:
 
 - Once you have implemented the linked list, you should be able to efficiently add, remove, and view items in the shopping cart.
 
-copy the code below to start working on your solution, compare your solution to [this example solution](/python/02-shopping_list_solution.py).
+Copy the code below to start working on your solution, compare your solution to [this example solution](python/02_shopping_list_solution.py).
 
 ```python
 '''

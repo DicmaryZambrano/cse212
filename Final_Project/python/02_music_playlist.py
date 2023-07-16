@@ -32,10 +32,11 @@ class MusicPlaylist:
         Adds a new song to the tail of the music playlist.
         """
         new_node = self.SongNode(song, self.tail, None)  # Create a new node with the given song
-        if self.tail:
+        if self.tail is not None:
             self.tail.next = new_node  # If the tail already exists, set its next attribute to the new node
         else:
             self.head = new_node  # If the tail doesn't exist, set the head attribute to the new node
+        
         self.tail = new_node  # Set the tail attribute to the new node
         self.num_songs += 1  # Increment the number of songs in the playlist
 
