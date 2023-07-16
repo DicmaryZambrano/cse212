@@ -24,7 +24,7 @@ Here are some common types of linked lists:
 
 Overall, understanding the different types of linked lists and their properties can be useful in choosing the appropriate data structure for a particular problem or application. In this tutorial we will be working with doubly linked list to solve real life problems.
 
-## Basic Operations on Linked Lists (Insertion, Deletion, Traversal)
+## Basic Operations on Linked Lists
 
 There are many operations we can perform on a linked list, like the typical insert, remove, and search operations. But you might find it interest how some operations have a better Big O performance than others. We will go thought each operation and explain why this is.
 
@@ -119,7 +119,7 @@ The Linked List class will store the head node, the tail node and keep track of 
 
 By using classes, we get a lot of liberty on how we can manage the values on our linked list.
 
-## Real life application for Linked Lists (Example problem)
+## Real life application for Linked Lists
 
 Time for the next exercise! We might want to have a little fun with this one, lest say you want to create a music playlist so you can hear all your favorite songs. A linked list would be perfect for you because the playlist will keep track of the order of the songs.
 

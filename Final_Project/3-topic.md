@@ -277,7 +277,7 @@ At first we might intuitively conclude that "2" is not greater than "10" but the
 
 Now that we've seen how we can use a binary search tree to store data other than numbers, let's explore the potential applications of this approach by solving a problem that involves storing and retrieving non-numeric data. By using a binary search tree to organize and search our data, we can make our code more efficient and engaging for the user.
 
-## Real life application for a Binary Search Tree (Example problem)
+## Real life application for a Binary Search Tree
 
 Binary search trees are a powerful data structure that can be used to efficiently store and retrieve large amounts of data.
 

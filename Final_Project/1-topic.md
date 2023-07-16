@@ -22,7 +22,7 @@ There are many different types of queues, each with its own unique characteristi
 
 This are not the only types of queues you will find on your career but are fairly common, we will not be touching upon all the kind of queues you can make but for the purposes of this tutorial we will be working with simple queues and priority queues.
 
-## Basic Operations on Queues:
+## Basic Operations on Queues
 
 You might have already seen some of these operations mentioned on the previous section, the terms enqueue and dequeue have been mentioned multiple times to describe the action of taking out of the queue and putting an item inside of the queue. There are other kinds of operations that you can do in a queue as you can see in the table below.
 
@@ -50,7 +50,7 @@ Let’s see how we can implement these operations in code, similar to stack queu
 
 By using a list for our queue some operations will have a different time complexity than others by the nature of how dynamic arrays work, note that this isn’t the only way you can implement the queue.
 
-## Real life application for Queues (Example problem)
+## Real life application for Queues
 
 Now it is time to get our hands dirty and start typing some code, for this first example we will create a queue for a call center. The call center needs a queue because they are not able to attend the customers in a FIFO order and they feel frustrated for the inconsistent waiting times, so they hope you can help them solve this problem.
 
